@@ -1,0 +1,13 @@
+<div ng-controller="listController">
+		
+	<div class="photo" ng-repeat="photo in photos">
+		<img ng-src="{{photo.media.m}}" alt="" ng-click="selectedPhoto($index)">
+		<div>
+			<h3 ng-click="selectedPhoto($index)">{{photo.title}}</h3>
+			<div class="date">Published {{photo.date_taken | dateSuffix}}</div>
+			<div class="author">{{photo.author_id}}</div>
+			<a href="{{photo.link}}">View on Flickr</a>
+		</div>
+	</div>
+
+</div>
