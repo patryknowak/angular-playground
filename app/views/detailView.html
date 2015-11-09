@@ -1,0 +1,22 @@
+<div ng-controller="listController">
+		
+	<div class="photo chosen">
+		<h2><a href="{{chosenPhoto.link}}">{{ (chosenPhoto.title.length > 0) ? chosenPhoto.title : 'No title' }}</a></h2>
+		<a class="back-link" href="#/">back</a>
+		<div><a class="author" href="https://www.flickr.com/people/{{chosenPhoto.author_id}}">Photo author</a> | <div class="date">Published {{chosenPhoto.date_taken | dateSuffix}}</div></div>
+		<div class="window">
+			<img ng-src="{{chosenPhoto.media.m}}" alt="Photo from Flickr">
+		</div>
+		<div class="det">
+			<p>Lorem Ipsum</p>
+			<ul class="tags">
+				<li>Tags:</li>
+				<li ng-repeat="tag in chosenPhoto.tagList">{{tag}}</li>
+			</ul>
+			
+			
+			
+		</div>
+	</div>
+
+</div>

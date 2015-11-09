@@ -1,3 +1,6 @@
+body {
+  font-family: 'Lato', sans-serif; }
+
 .slide {
   position: absolute;
   left: 0;
@@ -28,3 +31,58 @@
   max-width: 960px;
   margin: 0 auto;
   position: relative; }
+
+.photo {
+  background: #ccc;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box; }
+  .photo .window {
+    float: left;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    margin-right: 20px;
+    background: #aaa; }
+    .photo .window img {
+      width: 100%; }
+  .photo .flickr {
+    margin-left: 20px; }
+  .photo .date {
+    margin: 5px 0; }
+  .photo h3 {
+    width: calc(100% - 220px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    font-size: 1.5em; }
+  .photo.chosen .author {
+    display: inline-block; }
+  .photo.chosen .date {
+    display: inline-block; }
+  .photo.chosen .back-link {
+    float: right; }
+  .photo.chosen h2 {
+    display: inline-block;
+    margin-top: 0; }
+  .photo.chosen .tags {
+    display: inline;
+    list-style: none; }
+    .photo.chosen .tags li {
+      display: inline-block;
+      margin-right: 20px; }
+  .photo {
+    *zoom: 1; }
+  .photo:before, .photo:after {
+    content: "";
+    display: table; }
+  .photo:after {
+    clear: both; }
+  @media screen and (max-width: 480px) {
+    .photo .window {
+      width: 100%;
+      height: 300px; }
+    .photo h3 {
+      width: 100%; } }

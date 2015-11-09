@@ -1,12 +1,15 @@
 <div ng-controller="listController">
 		
 	<div class="photo" ng-repeat="photo in photos">
-		<img ng-src="{{photo.media.m}}" alt="" ng-click="selectedPhoto($index)">
+		<div class="window">
+			<img ng-src="{{photo.media.m}}" alt="Photo from Flickr" ng-click="selectedPhoto($index)">
+		</div>
 		<div>
-			<h3 ng-click="selectedPhoto($index)">{{photo.title}}</h3>
+			<h3 ng-click="selectedPhoto($index)">{{ (photo.title.length > 0) ? photo.title : 'No title' }}</h3>
 			<div class="date">Published {{photo.date_taken | dateSuffix}}</div>
-			<div class="author">{{photo.author_id}}</div>
-			<a href="{{photo.link}}">View on Flickr</a>
+			<a class="author" href="https://www.flickr.com/people/{{photo.author_id}}">Photo author</a>
+			
+			<a class="flickr" href="{{photo.link}}">View on Flickr</a>
 		</div>
 	</div>
 
